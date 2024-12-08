@@ -10,7 +10,7 @@ import PolylineDecoder from "@mapbox/polyline"; // Correctly use Polyline decode
 const fetchDirections = async (origin, destination, originCoords, destinationCoords) => {
   try {
     const response = await fetch(
-`https://maps.gomaps.pro/maps/api/directions/json?origin=${origin}&destination=${destination}&key=AlzaSyeiNCe2FIfIsByo01Rg3f-nLzfn0y_KQHu`
+`https://maps.gomaps.pro/maps/api/directions/json?origin=${origin}&destination=${destination}&key=`
     );    
     const data = await response.json();
     console.log("API Response:", data);

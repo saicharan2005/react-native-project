@@ -125,7 +125,7 @@ const HomeScreen = () => {
       .get(`https://maps.gomaps.pro/maps/api/place/details/json`, {
         params: {
           placeid: place_id,
-          key: 'AlzaSyeiNCe2FIfIsByo01Rg3f-nLzfn0y_KQHu', // Replace with your GoMaps API key
+          key: '', // Replace with your GoMaps API key
         },
       })
       .then((response) => {
@@ -162,7 +162,7 @@ const HomeScreen = () => {
         <CustomAutocomplete
           placeholder="Search for a place"
           onSelect={handlePlaceSelect} // Pass the handler function
-          apiKey="AlzaSysL7EikppUcHvWz5kJ3T-yYO2zb7BSeWok" // Replace with your GoMaps API key
+          apiKey="" // Replace with your GoMaps API key
         />
 
         {/* NavOptions or other components */}

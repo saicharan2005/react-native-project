@@ -26,7 +26,7 @@ const NavigateCard = () => {
       .get(`https://maps.gomaps.pro/maps/api/place/details/json`, {
         params: {
           placeid: place_id,
-          key: 'AlzaSysL7EikppUcHvWz5kJ3T-yYO2zb7BSeWok', // Replace with your GoMaps API key
+          key: '', // Replace with your GoMaps API key
         },
       })
       .then((response) => {
@@ -64,7 +64,7 @@ const NavigateCard = () => {
         <CustomAutocomplete
           placeholder="where to go"
           onSelect={handlePlaceSelect} // Pass the handler function
-          apiKey="AlzaSysL7EikppUcHvWz5kJ3T-yYO2zb7BSeWok" // Replace with your GoMaps API key
+          apiKey="" // Replace with your GoMaps API key
           onError={(errorMessage) => {
         console.error('MapViewDirections Error:', errorMessage);
          }}
