@@ -15,8 +15,8 @@ const MapScreen = () => {
   const Stack=createNativeStackNavigator();
   return (
     
-    <View>
-      <Text> here is the MapScreen</Text>
+    <View >
+      
       <View  style={tw`h-1/2`}>
         <Map/>
       </View>

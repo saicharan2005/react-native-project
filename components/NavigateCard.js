@@ -1,13 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, Touchable, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import tw from 'tailwind-react-native-classnames';
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { SafeAreaView } from 'react-native'
 import CustomAutocomplete from './CustomAutocomplete';
 import { setDestination } from '../slices/navSlice';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
 import RideOptionsCard from './RideOptionsCard';
+import NavFav from './NavFav';
+import { Icon } from '@rneui/base';
 
 RideOptionsCard
 
@@ -55,7 +57,8 @@ const NavigateCard = () => {
   return (
   
    <SafeAreaView style={tw`bg-white flex-1`}>
-      <Text style={tw`text-center py-5 text-xl `}>good morning ,cherry</Text>
+
+      <Text style={tw`text-center py-4   text-xl `}>Good morning ,Cherry</Text>
 
       <View style={tw`border-t border-gray-200 flex-shrink `}>
         <View>
@@ -71,8 +74,27 @@ const NavigateCard = () => {
         />
 
         </View>
-
+         <NavFav/>
       </View >
+
+      <View style={tw`border-t border-gray-100 py-2 mt-auto justify-evenly bg-gray flex-row  `}>
+
+        <TouchableOpacity  style={tw`flex flex-row  justify-between bg-black w-24 px-4 py-3 rounded-full`}>
+          <Icon name="car" type="font-awesome" color="white" size={16}/>
+          <Text style={tw`text-white text-center`}>
+            Rides
+          </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity  style={tw`flex flex-row  justify-between bg-black w-24 px-4 py-3 rounded-full`}>
+          <Icon name="car" type="font-awesome" color="white" size={16}/>
+          <Text style={tw`text-white text-center`}>
+            create
+          </Text>
+        </TouchableOpacity>
+        
+      </View>
+       
        </SafeAreaView>
 
   )

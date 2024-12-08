@@ -112,6 +112,7 @@ import { setDestination, setOrigin } from '../slices/navSlice';
 import CustomAutocomplete from '../components/CustomAutocomplete';
 import NavOptions from '../components/NavOptions';
 import axios from 'axios';
+import NavFav from '../components/NavFav';
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
@@ -167,6 +168,7 @@ const HomeScreen = () => {
 
         {/* NavOptions or other components */}
         <NavOptions />
+        <NavFav/>
       </View>
     </SafeAreaView>
   );
