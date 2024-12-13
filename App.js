@@ -11,6 +11,10 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MapScreen from "./screens/MapScreen";
 import LoginScreen from "./screens/LoginScreen";
+import OTPScreen from "./screens/OTPScreen";
+
+
+
 
 
 
@@ -30,13 +34,20 @@ export default function App() {
         
           <Stack.Navigator>
 
-            {/* <Stack.Screen
+            <Stack.Screen
               name="LoginScreen"
               component={LoginScreen}
               options={{
                 headerShown: false,
               }}
-            /> */}
+            />
+            <Stack.Screen
+              name="OTPScreen"
+              component={OTPScreen}
+              options={{
+                headerShown: false,
+              }}
+            />
 
             <Stack.Screen
               name="HomeScreen"

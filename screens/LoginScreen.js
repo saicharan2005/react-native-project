@@ -4,6 +4,8 @@ import tw from 'tailwind-react-native-classnames';
 import { FontAwesome } from '@expo/vector-icons'; // For QR Code Icon
 import HomeScreen from './HomeScreen';
 import { useNavigation } from '@react-navigation/native';
+import OTPScreen from './OTPScreen';
+
 
 
 const LoginScreen = () => {
@@ -22,8 +24,8 @@ const LoginScreen = () => {
 
       {/* Continue Button */}
       <TouchableOpacity 
-      // onPress={()=>{
-      //         navigation.navigate(HomeScreen)}}
+      onPress={()=>{
+              navigation.navigate(OTPScreen)}}
               style={tw`bg-black py-4 rounded-lg mt-4`}>
         <Text style={tw`text-white text-center text-lg`}>Continue</Text>
       </TouchableOpacity>
@@ -47,13 +49,7 @@ const LoginScreen = () => {
         <Text style={tw`text-black text-lg`}>Continue with Apple</Text>
       </TouchableOpacity>
 
-      {/* QR Code Login */}
-      <View>
-        <TouchableOpacity style={tw`bg-gray-100 py-4 rounded-lg flex-row items-center justify-center`}>
-          <FontAwesome name="qrcode" size={20} color="black" style={tw`mr-3`} />
-          <Text style={tw`text-black text-lg`}>Log in with QR code</Text>
-        </TouchableOpacity>
-      </View>
+      
 
       {/* Footer Text */}
       <Text style={tw`text-center text-gray-500 text-sm mt-5`}>

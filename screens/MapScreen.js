@@ -9,6 +9,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import NavigateCard from '../components/NavigateCard';
 import RideOptionsCard from '../components/RideOptionsCard';
+import RideProfiles from '../components/RideProfiles';
 
 
 const MapScreen = () => {
@@ -34,6 +35,14 @@ const MapScreen = () => {
         <Stack.Screen
               name="RideOptionsCard"
               component={RideOptionsCard}
+              options={{
+                headerShown: false,
+              }}
+            />
+          
+          <Stack.Screen
+              name="RideProfiles"
+              component={RideProfiles}
               options={{
                 headerShown: false,
               }}
