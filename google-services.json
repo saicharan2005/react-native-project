@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "669328056423",
+    "project_id": "lets-go-d4766",
+    "storage_bucket": "lets-go-d4766.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:669328056423:android:2f5b43ba96a49ae5f074c2",
+        "android_client_info": {
+          "package_name": "com.saicharan2005.LetsGo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFeP4Y6hRf8UtZ6pSR7lEPYO6Ua2JD2WQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

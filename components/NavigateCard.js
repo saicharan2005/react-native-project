@@ -10,6 +10,7 @@ import { useNavigation } from '@react-navigation/native';
 import RideOptionsCard from './RideOptionsCard';
 import NavFav from './NavFav';
 import { Icon } from '@rneui/base';
+import { GOOGLE_MAPS_APIKEY } from "@env";
 
 RideOptionsCard
 
@@ -28,7 +29,7 @@ const NavigateCard = () => {
       .get(`https://maps.gomaps.pro/maps/api/place/details/json`, {
         params: {
           placeid: place_id,
-          key: '', // Replace with your GoMaps API key
+          key: GOOGLE_MAPS_APIKEY, // Replace with your GoMaps API key
         },
       })
       .then((response) => {
@@ -64,10 +65,10 @@ const NavigateCard = () => {
         <View>
 
             {/* Custom Autocomplete Component */}
-        <CustomAutocomplete
-          placeholder="where to go"
-          onSelect={handlePlaceSelect} // Pass the handler function
-          apiKey="" // Replace with your GoMaps API key
+          <CustomAutocomplete
+            placeholder="where to go"
+            onSelect={handlePlaceSelect} // Pass the handler function
+            apiKey={GOOGLE_MAPS_APIKEY}// Replace with your GoMaps API key
           onError={(errorMessage) => {
         console.error('MapViewDirections Error:', errorMessage);
          }}

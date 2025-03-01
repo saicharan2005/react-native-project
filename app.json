@@ -2,6 +2,7 @@
   "expo": {
     "name": "Lets-Go",
     "slug": "Lets-Go",
+    "plugins": ["@react-native-firebase/app", "@react-native-firebase/auth"],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -16,13 +17,20 @@
       "supportsTablet": true
     },
     "android": {
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.saicharan2005.LetsGo"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e9f7a463-7a58-4563-b8ed-4f1ee5f2795c"
+      }
     }
   }
 }

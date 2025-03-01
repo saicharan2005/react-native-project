@@ -11,7 +11,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MapScreen from "./screens/MapScreen";
 import LoginScreen from "./screens/LoginScreen";
-import OTPScreen from "./screens/OTPScreen";
+
+import SignUp from "./screens/SignUp";
+
 
 
 
@@ -32,7 +34,7 @@ export default function App() {
            keyboardVerticalOffset={Platform.OS=== 'ios' ?-64:0}> */}
 
         
-          <Stack.Navigator>
+          <Stack.Navigator >
 
             <Stack.Screen
               name="LoginScreen"
@@ -42,8 +44,8 @@ export default function App() {
               }}
             />
             <Stack.Screen
-              name="OTPScreen"
-              component={OTPScreen}
+              name="SignUp"
+              component={SignUp}
               options={{
                 headerShown: false,
               }}

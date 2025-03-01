@@ -113,6 +113,7 @@ import CustomAutocomplete from '../components/CustomAutocomplete';
 import NavOptions from '../components/NavOptions';
 import axios from 'axios';
 import NavFav from '../components/NavFav';
+ import { GOOGLE_MAPS_APIKEY } from "@env";
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
@@ -126,7 +127,7 @@ const HomeScreen = () => {
       .get(`https://maps.gomaps.pro/maps/api/place/details/json`, {
         params: {
           placeid: place_id,
-          key: '', // Replace with your GoMaps API key
+          key:GOOGLE_MAPS_APIKEY// Replace with your GoMaps API key
         },
       })
       .then((response) => {
@@ -163,7 +164,7 @@ const HomeScreen = () => {
         <CustomAutocomplete
           placeholder="Search for a place"
           onSelect={handlePlaceSelect} // Pass the handler function
-          apiKey="" // Replace with your GoMaps API key
+          apiKey={GOOGLE_MAPS_APIKEY} // Replace with your GoMaps API key
         />
 
         {/* NavOptions or other components */}
